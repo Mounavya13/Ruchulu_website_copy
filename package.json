@@ -1,0 +1,10 @@
+{
+  "name": "mr-biriyaniwala",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cinematic, scroll-driven restaurant menu experience.",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check script.js && node --check server.mjs"
+  }
+}

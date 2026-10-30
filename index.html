@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mr. Biriyaniwala — an interactive, cinematic journey through the dum table."
+    />
+    <meta name="theme-color" content="#0a0907" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Mr. Biriyaniwala — Interactive Experience</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#timeline">Skip to the experience</a>
+
+    <div class="loader" role="status" aria-live="polite">
+      <div class="loader__mark">Mr. Biriyaniwala</div>
+      <div class="loader__track"><i></i></div>
+      <p>Preparing the dum table</p>
+    </div>
+
+    <div class="experience" id="experience">
+      <div class="render-frame">
+        <video
+          id="render-film"
+          src="./assets/mr-biriyaniwala-experience.mp4"
+          preload="auto"
+          muted
+          playsinline
+          tabindex="-1"
+          aria-hidden="true"
+        ></video>
+
+        <nav class="film-hotspots header-hotspots" aria-label="Experience navigation">
+          <button type="button" data-time="24" aria-label="Go to The Dum section"></button>
+          <button type="button" data-time="25.5" aria-label="Go to Spices section"></button>
+          <button type="button" data-menu-open aria-label="Open the full menu"></button>
+          <button type="button" data-time="9.6" aria-label="Go to Tandoor section"></button>
+          <button type="button" data-time="39.2" aria-label="Go to Visit section"></button>
+        </nav>
+
+        <a class="call-hotspot" href="tel:+914012345678" aria-label="Call Mr. Biriyaniwala to order"></a>
+
+        <aside class="film-hotspots dish-hotspots" aria-label="The table">
+          <button type="button" data-time="0" aria-label="Chicken Dum Biriyani"></button>
+          <button type="button" data-time="5.2" aria-label="Butter Chicken"></button>
+          <button type="button" data-time="7.4" aria-label="Tandoori Chicken"></button>
+          <button type="button" data-time="9.6" aria-label="Lamb Seekh Kebab"></button>
+          <button type="button" data-time="11.8" aria-label="Paneer Tikka"></button>
+          <button type="button" data-time="14" aria-label="Dal Makhani"></button>
+          <button type="button" data-time="16.2" aria-label="Garlic Butter Naan"></button>
+          <button type="button" data-time="18.4" aria-label="Mango Lassi"></button>
+        </aside>
+
+        <nav class="film-hotspots menu-scene-hotspots" aria-label="Menu categories in the film" hidden>
+          <button type="button" data-open-tab="tab-biryani" aria-label="Open Biryani menu"></button>
+          <button type="button" data-open-tab="tab-tandoor" aria-label="Open Tandoor menu"></button>
+          <button type="button" data-open-tab="tab-curries" aria-label="Open Curries menu"></button>
+          <button type="button" data-open-tab="tab-breads" aria-label="Open Breads menu"></button>
+          <button type="button" data-open-tab="tab-sides" aria-label="Open Sides and Sweets menu"></button>
+          <button type="button" data-open-tab="tab-drinks" aria-label="Open Drinks menu"></button>
+        </nav>
+
+        <nav class="film-hotspots visit-scene-hotspots" aria-label="Restaurant actions in the film" hidden>
+          <a href="tel:+91400000000" aria-label="Call Mr. Biriyaniwala"></a>
+          <button type="button" data-menu-open aria-label="View the full menu"></button>
+          <a
+            href="https://www.google.com/maps/search/?api=1&amp;query=Adelaide%2C%20South%20Australia"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Get directions to Mr. Biriyaniwala"
+          ></a>
+        </nav>
+      </div>
+
+      <section
+        class="menu-panel"
+        role="dialog"
+        aria-label="Restaurant menu"
+        aria-modal="true"
+        hidden
+      >
+        <div class="menu-panel__inner">
+          <div class="menu-panel__heading">
+            <p>Mr. Biriyaniwala · The full menu</p>
+            <button class="menu-panel__close" type="button" aria-label="Close menu">
+              Return to film <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <nav class="menu-tabs" aria-label="Menu categories" role="tablist">
+            <button type="button" role="tab" id="tab-biryani" aria-controls="panel-biryani" aria-selected="true">Biryani <small>08</small></button>
+            <button type="button" role="tab" id="tab-tandoor" aria-controls="panel-tandoor" aria-selected="false">Tandoor <small>06</small></button>
+            <button type="button" role="tab" id="tab-curries" aria-controls="panel-curries" aria-selected="false">Curries <small>04</small></button>
+            <button type="button" role="tab" id="tab-breads" aria-controls="panel-breads" aria-selected="false">Breads <small>05</small></button>
+            <button type="button" role="tab" id="tab-sides" aria-controls="panel-sides" aria-selected="false">Sides &amp; sweets <small>05</small></button>
+            <button type="button" role="tab" id="tab-drinks" aria-controls="panel-drinks" aria-selected="false">Drinks <small>05</small></button>
+          </nav>
+
+          <div class="menu-category" id="panel-biryani" role="tabpanel" aria-labelledby="tab-biryani">
+            <article><div><h2>Chicken Dum Biriyani</h2><p>Bone-in chicken, saffron basmati, birista, salan &amp; raita</p></div><strong>$21.90</strong></article>
+            <article><div><h2>Lamb Dum Biriyani</h2><p>Slow-marinated lamb shoulder, kacchi style</p></div><strong>$24.90</strong></article>
+            <article><div><h2>Goat Dum Biryani</h2><p>On the bone, the way Hyderabad likes it</p></div><strong>$25.90</strong></article>
+            <article><div><h2>Chicken 65 Biryani</h2><p>Fried Chicken 65 folded through spiced rice</p></div><strong>$22.90</strong></article>
+            <article><div><h2>Egg Dum Biryani</h2><p>Masala-roasted eggs, saffron rice</p></div><strong>$18.90</strong></article>
+            <article><div><h2>Paneer Dum Biryani</h2><p>Paneer tikka layered with mint and fried onion</p></div><strong>$19.90</strong></article>
+            <article><div><h2>Vegetable Dum Biryani</h2><p>Seasonal vegetables, whole spices, kewra</p></div><strong>$18.90</strong></article>
+            <article><div><h2>Family Handi</h2><p>Sealed copper handi for four — opened at your table</p></div><strong>$79.00</strong></article>
+          </div>
+
+          <div class="menu-category" id="panel-tandoor" role="tabpanel" aria-labelledby="tab-tandoor" hidden>
+            <article><div><h2>Tandoori Chicken</h2><p>Yoghurt, Kashmiri chilli and charred lemon</p></div><strong>$18.90</strong></article>
+            <article><div><h2>Lamb Seekh Kebab</h2><p>Hand-minced lamb, green chilli and mint</p></div><strong>$18.90</strong></article>
+            <article><div><h2>Paneer Tikka</h2><p>Fresh paneer, capsicum and tandoori onion</p></div><strong>$17.90</strong></article>
+            <article><div><h2>Murgh Malai Tikka</h2><p>Chicken, cream, cardamom and white pepper</p></div><strong>$19.90</strong></article>
+            <article><div><h2>Fish Tikka</h2><p>Market fish, ajwain and roasted gram</p></div><strong>$21.90</strong></article>
+            <article><div><h2>Tandoori Mushroom</h2><p>Spiced mushrooms, hung curd and kasuri methi</p></div><strong>$16.90</strong></article>
+          </div>
+
+          <div class="menu-category" id="panel-curries" role="tabpanel" aria-labelledby="tab-curries" hidden>
+            <article><div><h2>Butter Chicken</h2><p>Tandoor-charred chicken, tomato makhani and cultured butter</p></div><strong>$22.90</strong></article>
+            <article><div><h2>Dal Makhani</h2><p>Black lentils simmered overnight with butter</p></div><strong>$16.90</strong></article>
+            <article><div><h2>Chicken Korma</h2><p>Cashew, cardamom and saffron gravy</p></div><strong>$21.90</strong></article>
+            <article><div><h2>Paneer Butter Masala</h2><p>Paneer, tomato, fenugreek and cream</p></div><strong>$19.90</strong></article>
+          </div>
+
+          <div class="menu-category" id="panel-breads" role="tabpanel" aria-labelledby="tab-breads" hidden>
+            <article><div><h2>Garlic Butter Naan</h2><p>Garlic, cultured butter and fresh coriander</p></div><strong>$6.50</strong></article>
+            <article><div><h2>Plain Naan</h2><p>Soft leavened bread from the tandoor wall</p></div><strong>$4.50</strong></article>
+            <article><div><h2>Tandoori Roti</h2><p>Whole-wheat flatbread, fired to order</p></div><strong>$4.50</strong></article>
+            <article><div><h2>Laccha Paratha</h2><p>Layered whole-wheat bread with ghee</p></div><strong>$5.90</strong></article>
+            <article><div><h2>Roomali Roti</h2><p>Paper-thin handkerchief bread</p></div><strong>$5.50</strong></article>
+          </div>
+
+          <div class="menu-category" id="panel-sides" role="tabpanel" aria-labelledby="tab-sides" hidden>
+            <article><div><h2>Boondi Raita</h2><p>Whipped yoghurt, crisp boondi and roasted cumin</p></div><strong>$5.90</strong></article>
+            <article><div><h2>Mirchi Ka Salan</h2><p>Hyderabadi peanut, sesame and chilli curry</p></div><strong>$7.90</strong></article>
+            <article><div><h2>Kachumber Salad</h2><p>Cucumber, tomato, onion and lemon</p></div><strong>$6.50</strong></article>
+            <article><div><h2>Gulab Jamun</h2><p>Warm milk dumplings in cardamom syrup</p></div><strong>$7.90</strong></article>
+            <article><div><h2>Shahi Tukda</h2><p>Saffron rabri, brioche and pistachio</p></div><strong>$9.90</strong></article>
+          </div>
+
+          <div class="menu-category" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+            <article><div><h2>Mango Lassi</h2><p>Alphonso mango, thick curd and cardamom</p></div><strong>$7.50</strong></article>
+            <article><div><h2>Sweet Lassi</h2><p>Churned yoghurt and rose water</p></div><strong>$6.50</strong></article>
+            <article><div><h2>Salted Lassi</h2><p>Yoghurt, cumin, mint and black salt</p></div><strong>$6.50</strong></article>
+            <article><div><h2>Masala Chaas</h2><p>Spiced buttermilk with coriander</p></div><strong>$5.90</strong></article>
+            <article><div><h2>Nimbu Soda</h2><p>Fresh lime, soda and a choice of salt or sugar</p></div><strong>$5.50</strong></article>
+          </div>
+
+          <p class="menu-panel__note">Prices in AUD · Please tell us about allergies before you order.</p>
+        </div>
+      </section>
+    </div>
+
+    <main class="timeline" id="timeline" aria-label="Mr. Biriyaniwala story">
+      <section aria-label="Chicken Dum Biriyani menu scene"></section>
+      <section aria-label="Butter Chicken menu scene"></section>
+      <section aria-label="Tandoori Chicken menu scene"></section>
+      <section aria-label="Lamb Seekh Kebab menu scene"></section>
+      <section aria-label="Paneer Tikka menu scene"></section>
+      <section aria-label="Dal Makhani menu scene"></section>
+      <section aria-label="Garlic Butter Naan menu scene"></section>
+      <section aria-label="Mango Lassi menu scene"></section>
+      <section aria-label="Dum Pukht ingredients scene"></section>
+      <section aria-label="Cooking method scene"></section>
+      <section aria-label="Restaurant visit scene"></section>
+    </main>
+
+    <noscript>
+      <p class="noscript">JavaScript is required for the scroll-controlled film experience.</p>
+    </noscript>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
